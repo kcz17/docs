@@ -1,6 +1,9 @@
 site_name: Kubedim
 nav:
   - Home: index.md
+  - Configuration: configuration.md
+  - Troubleshooting: troubleshooting.md
+  - Advanced Usage: advanced.md
 theme:
   name: readthedocs
   highlightjs: true

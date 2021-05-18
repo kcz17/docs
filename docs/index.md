@@ -33,7 +33,8 @@ you should verify and change if appropriate:
   8079 respectively
 - The dimmer reverse proxy and API endpoints are exposed outside the cluster on
   ports 8078 and 8079 respectively
-- The ConfigMap is called `dimmer-config`
+- The front-end of our target application is made available within the cluster
+  (i.e., via service) at `front-end:80`
 
 #### Deployment
 
@@ -135,16 +136,41 @@ metadata:
 data:
   config.yaml: |
     connection:
-      frontendPort: 8078 # Internal front-end port
+      # Instructs Kubedim to listen on the reverse proxy port we have provided.
+      frontendPort: 8078
+      # Instructs Kubedim to proxy requests to front-end:80
       backendHost: "front-end"
       backendPort: 80
-      adminPort: 8079 # Internal admin port
+      # Instructs Kubedim to listen on the admin port we have provided.
+      adminPort: 8079
     logging:
+      # We will not log any output for the time being.
       driver: "noop"
+    # We do not enable dimming or any brownout strategies for the time being.
     dimming:
-      enabled: true
+      enabled: false
       dimmableComponents:
-        # TODO
+        # We will specify dimmable components later.
       profiler:
         enabled: false
 ```
+
+### Deployment and Testing
+
+Deploy the files using `kubectl apply -f [manifest file path]`. If you have
+followed the suggested paths, you can use `kubectl apply -R -f kubedim/`.
+
+Kubedim will now be configured to proxy requests without any dimming. If you have
+followed the instructions above without changes, your application will be
+available via the reverse proxy at `http://[any node IP]:30002` .
+
+### Next Steps
+
+Visit the [Configuration](configuration.md) to learn how to enable logging,
+enable dimming and configure brownout strategies.
+
+## Uninstallation
+
+Kubedim can be simply installed by running `kubectl delete -f [manifest file path]`
+on the created manifest files. If you have followed the suggested paths, you can
+use `kubectl delete -R -f kubedim/`
