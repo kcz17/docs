@@ -1,0 +1,8 @@
+site_name: Kubedim
+nav:
+  - Home: index.md
+theme:
+  name: readthedocs
+  highlightjs: true
+  hljs_languages:
+    - yaml
