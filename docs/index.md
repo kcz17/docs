@@ -173,4 +173,4 @@ enable dimming and configure brownout strategies.
 
 Kubedim can be simply installed by running `kubectl delete -f [manifest file path]`
 on the created manifest files. If you have followed the suggested paths, you can
-use `kubectl delete -R -f kubedim/`
+use `kubectl delete -R -f kubedim/`.
