@@ -166,8 +166,9 @@ available via the reverse proxy at `http://[any node IP]:30002` .
 
 ### Next Steps
 
-Visit the [Configuration](configuration.md) to learn how to enable logging,
-enable dimming and configure brownout strategies.
+Visit the [Concepts](concepts.md) page to understand what brownout strategies
+you can use. Then, visit the [Configuration](configuration.md) page to learn how
+to enable logging, enable dimming and configure brownout strategies.
 
 ## Uninstallation
 
