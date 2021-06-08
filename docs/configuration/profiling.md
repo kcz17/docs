@@ -265,4 +265,4 @@ the following section nested under the `dimming` attribute.
           # We use different databases to store priorities and the queue.
           prioritiesDB: 0 
           queueDB: 1
-  ```
+```
