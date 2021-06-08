@@ -2,11 +2,18 @@ site_name: Kubedim
 nav:
   - Home: index.md
   - Concepts: concepts.md
-  - Configuration: configuration.md
-  - Troubleshooting: troubleshooting.md
-  - Advanced Usage: advanced.md
+  - Configuration:
+      - First Steps: configuration/first-steps.md
+      - Baseline Dimming: configuration/baseline.md
+      - Component Weightings: configuration/component-weightings.md
+      - Profiling: configuration/profiling.md
+  - Advanced Usage:
+      - Advanced Usage: advanced.md
 theme:
   name: readthedocs
   highlightjs: true
   hljs_languages:
     - yaml
+markdown_extensions:
+  - toc:
+      baselevel: 2
