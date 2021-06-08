@@ -206,7 +206,7 @@ data:
       # We will fill this out later.
 ```
 
-# Configuring Profiler Rules
+## Configuring Profiler Rules
 
 An example of profiler rules in the above ConfigMap is as follows:
 
@@ -240,7 +240,7 @@ the number of times a session has encountered each path-method combination.
 If the number of occurrences is met or exceeded when testing a rule, then the
 resulting priority is assigned to the user and no further rules are tested.
 
-# Connecting Kubedim to the Profiler
+## Connecting Kubedim to the Profiler
 
 To connect Kubedim to the profiler, we update the Kubedim ConfigMap, adding
 the following section nested under the `dimming` attribute.
