@@ -144,7 +144,7 @@ data:
       # Instructs Kubedim to listen on the admin port we have provided.
       adminPort: 8079
     logging:
-      # We will not log any output for the time being.
+      # We will not log any output.
       driver: "noop"
     # We do not enable dimming or any brownout strategies for the time being.
     dimming:

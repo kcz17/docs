@@ -7,8 +7,6 @@ nav:
       - Baseline Dimming: configuration/baseline.md
       - Component Weightings: configuration/component-weightings.md
       - Profiling: configuration/profiling.md
-  - Advanced Usage:
-      - Advanced Usage: advanced.md
 theme:
   name: readthedocs
   highlightjs: true
