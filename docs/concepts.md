@@ -10,12 +10,21 @@ experience. These strategies require additional configuration.
 
 ### Component Weightings
 
-Why and who for?
+This strategy allows you to dim components non-uniformly. By focusing dimming
+on components which add the most to system load when they are made available,
+optional components which contribute less to load should not need to be dimmed
+as heavily, making your optional components more available to your users.
 
-How does it work?
+This strategy works by configuring each dimmable component to have a weighting
+between 0 and 1. Components which contribute most load to a
+system have a large value assigned. These weightings represent the probability
+that an optional component will be dimmed, given that a dimming decision has
+been made.
 
 ### Profiling
 
-Why and who for?
-
-How does it work?
+This strategy allows you to ensure that only users who are of lower priority to
+your application are dimmed first. You declaratively specify rules on how an
+application should be dimmed, then Kubedim's profiler will automatically assign
+priorities to users based on these rules. Where users have not been profiled,
+they are dimmed according to Kubedim's standard dimming strategy.
